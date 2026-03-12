@@ -1,10 +1,10 @@
 from dotenv import load_dotenv
 import os
 import requests
+import streamlit as st
 from pandas.core.common import not_none
 load_dotenv()
-API_KEY = API_KEY = os.getenv("OPENWEATHER_API_KEY")
-
+API_KEY = API_KEY = os.getenv("OPENWEATHER_API_KEY") or st.secrets.get("OPENWEATHER_API_KEY")
 
 
 def get_data(place, forecast_days=None):
