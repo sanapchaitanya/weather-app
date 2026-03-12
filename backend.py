@@ -1,7 +1,10 @@
+from dotenv import load_dotenv
+import os
 import requests
 from pandas.core.common import not_none
+load_dotenv()
+API_KEY = API_KEY = os.getenv("OPENWEATHER_API_KEY")
 
-API_KEY = "3c2a2b43e9135a025b922fe69d4c5df7"
 
 
 def get_data(place, forecast_days=None):
