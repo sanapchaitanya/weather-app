@@ -63,8 +63,6 @@ if place:
                     5: "Very Poor"
                 }
 
-
-
                 if aqi == 1:
                     st.success("Air Quality: Good")
                 elif aqi == 2:
